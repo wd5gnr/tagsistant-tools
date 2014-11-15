@@ -1,0 +1,12 @@
+#!/bin/bash
+if [ -z "$TAGROOT" ]
+then
+  TAGROOT=~/files
+fi
+
+if [ -z "$1" ]
+then
+  exec ls "$TAGROOT/tags"
+else
+  exec ls "$TAGROOT/store/$1/@"
+fi
